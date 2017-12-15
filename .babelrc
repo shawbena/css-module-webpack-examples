@@ -1,0 +1,16 @@
+{
+    "comments": true,
+    "minified": false,
+    "presets": [
+        "env",
+        "react"
+    ],
+    "ignore": [
+    ],
+    "plugins": [
+        "syntax-dynamic-import",
+        "transform-class-properties",
+        "transform-object-rest-spread",
+        "transform-runtime"
+    ]
+}
