@@ -1,0 +1,9 @@
+:root{
+    --maincolor: red;
+}
+html, body{
+    background: --palette-red-100;
+}
+a{
+    color: var(--maincolor);
+}

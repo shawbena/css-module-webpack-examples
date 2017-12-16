@@ -1,0 +1,25 @@
+:root{
+    --maincolor: red;
+    --accent-color: #006;
+    --header-color: #06c;
+    --color: blue;
+}
+
+#foo h1{
+    color: var(--maincolor);
+}
+
+h1{
+    background: var(--header-color);
+}
+div {
+    --color: green;
+}
+
+#alert{
+    --color: red;
+}
+
+* {
+    color: var(--color);
+}

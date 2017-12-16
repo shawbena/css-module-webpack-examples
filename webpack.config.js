@@ -19,11 +19,22 @@ const config = {
       test: /\.css$/,
       loader: ExtractTextPlugin.extract({
         fallback: 'style-loader',
-        use: ['css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]', 'postcss-loader']
+        use: [
+          // 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]', 
+          'css-loader',
+          'postcss-loader']
       })
     }, {
       test: /\.svg$/,
       loader: "url-loader?limit=10000&mimetype=image/svg+xml"
+    }, {
+      test: /\.(png|svg|jpg|gif|woff|woff2|eot|ttf|otf)$/,
+      use: [{
+        loader: 'file-loader?',
+        options: {
+          outputPath: 'assets/'
+        }
+      }]
     }]
   },
 
@@ -40,13 +51,17 @@ const config = {
 };
 
 const dirs = [
-  '',
-  '0-Logo',
-  '1-ScopedSelectors',
-  '2-GlobalSelectors',
-  '3-ClassComposition',
-  '4-CompositionOverrides',
-  '5-ScopedAnimations'
+  // '',
+  // '0-Logo',
+  // '1-ScopedSelectors',
+  // '2-GlobalSelectors',
+  // '3-ClassComposition',
+  // '4-CompositionOverrides',
+  // '5-ScopedAnimations',
+  // 'postcss-mixins',
+  // 'postcss-import'
+  'custom-properties',
+  'css-apply-rule'
 ];
 
 module.exports = dirs.map(dir => {
